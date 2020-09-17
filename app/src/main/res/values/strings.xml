@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Pick Music School</string>
+
+    <string name="menu_home_home">Home</string>
+    <string name="menu_home_profile">Perfil</string>
+
+    <string name="home_select_options">Selecione o que deseja fazer</string>
+
+    <string name="label_username">Nome completo</string>
+    <string name="label_phone">Celular</string>
+    <string name="label_email">E-mail</string>
+    <string name="label_password">Senha</string>
+    <string name="label_accept_terms">Li e aceito os termos</string>
+    <string name="label_terms">Termos de uso</string>
+
+    <string name="label_create_account">Criar minha conta</string>
+    <string name="label_reset_password">Esqueci minha senha</string>
+
+    <string name="logo_app_content_desc">Logo app</string>
+    <string name="button_login">Conectar</string>
+    <string name="button_create_account">Criar conta</string>
+    <string name="button_i_have_account">Já tenho conta</string>
+
+    <string name="login_subtitle">Faça o login</string>
+
+    <string name="signup_subtitle">Crie sua conta</string>
+
+    <string name="button_create_class">Cadastrar aula</string>
+    <string name="button_list_class">Listar aulas</string>
+    <string name="button_about">Sobre</string>
+
+    <string name="dialogNewTitle">Aulas de música</string>
+    <string name="dialogEditTitle">Editar aula</string>
+    <string name="hintText">Adicione uma aula</string>
+
+    <string name="newClass">Nova aula</string>
+    <string name="editClass">Editar aula</string>
+    <string name="saveClass">Salvar</string>
+    <string name="updateClass">Atualizar aula</string>
+    <string name="cancelClass">Cancelar</string>
+    <string name="toast">Adicione uma nova aula</string>
+
+    <string name="deleteClass">Remover aula</string>
+    <string name="deleteAllClasses">Remover tudo</string>
+    <string name="options">Escolha uma opção</string>
+    <string name="errorToast">Falha ao realizar operação</string>
+
+    <string name="developerTitle">Desenvolvido por:</string>
+    <string name="developer">Junior Mauricio Staudt</string>
+    <string name="version">Versão 1.0</string>
+</resources>

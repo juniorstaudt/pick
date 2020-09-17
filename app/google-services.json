@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "645991031772",
+    "firebase_url": "https://pick-music-school.firebaseio.com",
+    "project_id": "pick-music-school",
+    "storage_bucket": "pick-music-school.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:645991031772:android:92f8036afa80c3ac1fe519",
+        "android_client_info": {
+          "package_name": "com.br.jrstaudt.pick"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "645991031772-9813igr19l8irj6lth35n6dgp8enong3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBadR2-BWm4f27fqoCgxzTM55TEPljne2s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "645991031772-9813igr19l8irj6lth35n6dgp8enong3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
