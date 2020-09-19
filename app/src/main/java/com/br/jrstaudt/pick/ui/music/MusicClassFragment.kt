@@ -21,6 +21,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.br.jrstaudt.pick.models.DBHelper
 import com.br.jrstaudt.pick.models.MusicClass
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.firebase.analytics.FirebaseAnalytics
+import com.google.firebase.analytics.ktx.analytics
+import com.google.firebase.analytics.ktx.logEvent
+import com.google.firebase.ktx.Firebase
 
 class MusicClassFragment : AppCompatActivity() {
 
@@ -35,6 +39,12 @@ class MusicClassFragment : AppCompatActivity() {
         setContentView(R.layout.fragment_music_class_main)
 
         setUpComponents()
+
+        val firebaseAnalytics = Firebase.analytics
+
+        firebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_ITEM) {
+            param("acessou_home", 10)
+        }
     }
 
     private fun setUpComponents() {

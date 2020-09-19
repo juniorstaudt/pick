@@ -18,6 +18,10 @@ import com.br.jrstaudt.pick.R
 import com.br.jrstaudt.pick.models.NewUser
 import com.br.jrstaudt.pick.models.RequestState
 import com.br.jrstaudt.pick.ui.base.BaseFragment
+import com.google.firebase.analytics.FirebaseAnalytics
+import com.google.firebase.analytics.ktx.analytics
+import com.google.firebase.analytics.ktx.logEvent
+import com.google.firebase.ktx.Firebase
 
 class SignUpFragment : BaseFragment() {
     override val layout = R.layout.fragment_sign_up
@@ -36,6 +40,12 @@ class SignUpFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) { super.onViewCreated(view, savedInstanceState)
         setUpView(view)
         registerObserver()
+
+        val firebaseAnalytics = Firebase.analytics
+
+        firebaseAnalytics.logEvent(FirebaseAnalytics.Event.APP_OPEN) {
+            param("acessou_signup", 4)
+        }
     }
 
     private fun setUpView(view: View) {

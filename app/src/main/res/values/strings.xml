@@ -48,4 +48,8 @@
     <string name="developerTitle">Desenvolvido por:</string>
     <string name="developer">Junior Mauricio Staudt</string>
     <string name="version">Versão 1.0</string>
+
+    <string name="default_notification_channel_id">fcm_default_channel</string>
+
+    <string name="com.crashlytics.useFirebaseAppId" translatable="false">true</string>
 </resources>

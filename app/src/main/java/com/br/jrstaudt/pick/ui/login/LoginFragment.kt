@@ -17,10 +17,16 @@ import com.br.jrstaudt.pick.exceptions.EmailInvalidException
 import com.br.jrstaudt.pick.exceptions.PasswordInvalidException
 import com.br.jrstaudt.pick.models.RequestState
 import com.br.jrstaudt.pick.ui.base.BaseFragment
+import com.google.firebase.analytics.FirebaseAnalytics
+import com.google.firebase.analytics.ktx.analytics
+import com.google.firebase.analytics.ktx.logEvent
+import com.google.firebase.ktx.Firebase
+import kotlinx.android.synthetic.main.fragment_home.*
 
 class LoginFragment : BaseFragment() {
 
     override val layout = R.layout.fragment_login
+    private lateinit var firebaseAnalytics: FirebaseAnalytics
 
     private lateinit var tvSubTitleLogin: TextView
     private lateinit var containerLogin: LinearLayout
@@ -38,6 +44,8 @@ class LoginFragment : BaseFragment() {
         sharedElementEnterTransition = TransitionInflater
             .from(context)
             .inflateTransition(android.R.transition.move)
+
+        firebaseAnalytics = Firebase.analytics
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) { super.onViewCreated(view, savedInstanceState)
@@ -68,6 +76,12 @@ class LoginFragment : BaseFragment() {
         hideLoading()
         NavHostFragment.findNavController(this)
             .navigate(R.id.action_loginFragment_to_main_nav_graph)
+
+        val firebaseAnalytics = Firebase.analytics
+
+        firebaseAnalytics.logEvent(FirebaseAnalytics.Event.APP_OPEN) {
+            param("fez_login", 3)}
+
     }
 
     private fun showError(throwable: Throwable) {
@@ -122,3 +136,4 @@ class LoginFragment : BaseFragment() {
         tvResetPassword.startAnimation(anim)
     }
 }
+

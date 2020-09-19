@@ -9,6 +9,10 @@ import android.webkit.WebView
 import android.widget.ImageView
 import com.br.jrstaudt.pick.R
 import com.br.jrstaudt.pick.ui.base.BaseFragment
+import com.google.firebase.analytics.FirebaseAnalytics
+import com.google.firebase.analytics.ktx.analytics
+import com.google.firebase.analytics.ktx.logEvent
+import com.google.firebase.ktx.Firebase
 
 class TermsFragment : BaseFragment() {
     override val layout = R.layout.fragment_terms
@@ -27,5 +31,13 @@ class TermsFragment : BaseFragment() {
         }
 
         wvTerms.loadUrl("https://pick-music-school.firebaseapp.com")
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        val firebaseAnalytics = Firebase.analytics
+        firebaseAnalytics.logEvent(FirebaseAnalytics.Event.APP_OPEN) {
+            param("acessou_termos", 5)
+        }
     }
 }
