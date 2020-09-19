@@ -1,10 +1,7 @@
 package com.br.jrstaudt.pick.ui.signup
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -109,7 +106,7 @@ class SignUpFragment : BaseFragment() {
                 hideLoading()
                 showMessage(it.throwable.message)
             }
-            is RequestState.Loading -> showLoading("Autenticando...") }
+            is RequestState.Loading -> showLoading("Cadastrando seu usuário, aguarde...") }
     }) }
 }
 

@@ -47,7 +47,7 @@ class SignUpViewModel : ViewModel() {
 
     private fun validateFields(newUser: NewUser): Boolean {
         if (newUser.username?.isEmpty() == true) {
-            signUpState.value = RequestState.Error(Throwable("Informe o nome do usuário"))
+            signUpState.value = RequestState.Error(Throwable("Informe seu nome completo."))
             return false
         }
         if (newUser.email?.isValidEmail() == false) {
@@ -55,11 +55,11 @@ class SignUpViewModel : ViewModel() {
             return false
         }
         if (newUser.phone?.isEmpty() == true) {
-            signUpState.value = RequestState.Error(Throwable("Informe o telefone do usuário"))
+            signUpState.value = RequestState.Error(Throwable("Informe o seu número de telefone móvel com DDD."))
             return false
         }
         if (!ValidadorTelefone.TELEFONE.ehValido(newUser.phone)) {
-            signUpState.value = RequestState.Error(Throwable("Informe um telefone válido"))
+            signUpState.value = RequestState.Error(Throwable("Informe um número dev telefone válido por favor."))
             return false
         }
 
@@ -68,7 +68,7 @@ class SignUpViewModel : ViewModel() {
             return false
         }
         if (newUser.email?.length ?: 0 < 6) { signUpState.value =
-            RequestState.Error(PasswordInvalidException("Senha com no mínimo 6 caracteres"))
+            RequestState.Error(PasswordInvalidException("A senha deve ter no mínimo 6 caracteres"))
             return false
         }
         return true

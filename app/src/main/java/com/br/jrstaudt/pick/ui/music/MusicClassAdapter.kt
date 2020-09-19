@@ -2,15 +2,12 @@ package com.br.jrstaudt.pick.ui.music
 
 import android.content.Context
 import android.view.LayoutInflater
-import android.view.TextureView
 import android.view.View
 import android.view.ViewGroup
-import android.widget.SimpleAdapter
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.br.jrstaudt.pick.R
 import com.br.jrstaudt.pick.models.MusicClass
-import kotlinx.android.synthetic.main.fragment_music_class_list_item.view.*
 import java.text.ParseException
 import java.text.SimpleDateFormat
 
