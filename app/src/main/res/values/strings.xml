@@ -27,6 +27,7 @@
 
     <string name="button_create_class">Aulas de música</string>
     <string name="button_list_class">Listar aulas</string>
+    <string name="button_map">Nossas escolas</string>
     <string name="button_about">Sobre o app</string>
     <string name="button_logout">Sair</string>
 

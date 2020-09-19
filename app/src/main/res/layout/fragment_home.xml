@@ -74,22 +74,33 @@
             style="@style/button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="64dp"
+            android:layout_marginTop="32dp"
             android:text="@string/button_create_class"
             app:layout_constraintEnd_toEndOf="@+id/tvSubTitleSignUp"
             app:layout_constraintStart_toStartOf="@+id/tvSubTitleSignUp"
             app:layout_constraintTop_toBottomOf="@+id/tvSubTitleSignUp" />
 
         <Button
+            android:id="@+id/btMaps"
+            style="@style/button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/button_map"
+            app:layout_constraintEnd_toEndOf="@+id/btCreateClass"
+            app:layout_constraintStart_toStartOf="@+id/btCreateClass"
+            app:layout_constraintTop_toBottomOf="@+id/btCreateClass" />
+
+        <Button
             android:id="@+id/btAbout"
             style="@style/button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="64dp"
+            android:layout_marginTop="32dp"
             android:text="@string/button_about"
-            app:layout_constraintEnd_toEndOf="@+id/btCreateClass"
-            app:layout_constraintStart_toStartOf="@+id/btCreateClass"
-            app:layout_constraintTop_toBottomOf="@+id/btCreateClass" />
+            app:layout_constraintEnd_toEndOf="@+id/btMaps"
+            app:layout_constraintStart_toStartOf="@+id/btMaps"
+            app:layout_constraintTop_toBottomOf="@+id/btMaps" />
 
 
         <Button
@@ -97,7 +108,7 @@
             style="@style/button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="64dp"
+            android:layout_marginTop="32dp"
             android:text="@string/button_logout"
             app:layout_constraintEnd_toEndOf="@+id/btAbout"
             app:layout_constraintStart_toStartOf="@+id/btAbout"

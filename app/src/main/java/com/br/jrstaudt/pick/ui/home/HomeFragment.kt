@@ -14,7 +14,6 @@ import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.analytics.ktx.analytics
 import com.google.firebase.analytics.ktx.logEvent
 import com.google.firebase.ktx.Firebase
-import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : BaseFragment() {
 
@@ -22,6 +21,7 @@ class HomeFragment : BaseFragment() {
     private lateinit var btCreateClass: Button
     private lateinit var btAbout: Button
     private lateinit var btLogOut: Button
+    private lateinit var btMap: Button
     private val homeViewModel: HomeViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,6 +44,7 @@ class HomeFragment : BaseFragment() {
         btCreateClass = view.findViewById(R.id.btCreateClass)
         btAbout = view.findViewById(R.id.btAbout)
         btLogOut = view.findViewById(R.id.btLogOut)
+        btMap = view.findViewById(R.id.btMaps)
 
         setUpListener()
 
@@ -53,6 +54,11 @@ class HomeFragment : BaseFragment() {
         btCreateClass.setOnClickListener {
             NavHostFragment.findNavController(this)
                 .navigate(R.id.action_homeFragment_to_musicClassFragment)
+        }
+
+        btMap.setOnClickListener {
+            NavHostFragment.findNavController(this)
+                .navigate(R.id.action_homeFragment_to_mapsFragment)
         }
 
         btAbout.setOnClickListener {
