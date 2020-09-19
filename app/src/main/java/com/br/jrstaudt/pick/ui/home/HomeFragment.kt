@@ -58,7 +58,7 @@ class HomeFragment : BaseFragment() {
 
         btMap.setOnClickListener {
             NavHostFragment.findNavController(this)
-                .navigate(R.id.action_homeFragment_to_mapsFragment)
+                .navigate(R.id.action_homeFragment_to_map_view)
         }
 
         btAbout.setOnClickListener {
