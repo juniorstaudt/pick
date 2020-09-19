@@ -1,23 +1,18 @@
 package com.br.jrstaudt.pick.ui.music
 
-import android.content.ClipData
-import android.graphics.Color
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.EditText
-import android.widget.LinearLayout
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.coordinatorlayout.widget.CoordinatorLayout
-import androidx.recyclerview.widget.RecyclerView
-import com.br.jrstaudt.pick.R
-import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.br.jrstaudt.pick.R
 import com.br.jrstaudt.pick.models.DBHelper
 import com.br.jrstaudt.pick.models.MusicClass
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -42,7 +37,7 @@ class MusicClassFragment : AppCompatActivity() {
 
         val firebaseAnalytics = Firebase.analytics
 
-        firebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_ITEM) {
+        firebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT) {
             param("acessou_home", 10)
         }
     }
