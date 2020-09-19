@@ -25,9 +25,10 @@
 
     <string name="signup_subtitle">Crie sua conta</string>
 
-    <string name="button_create_class">Cadastrar aula</string>
+    <string name="button_create_class">Aulas de música</string>
     <string name="button_list_class">Listar aulas</string>
-    <string name="button_about">Sobre</string>
+    <string name="button_about">Sobre o app</string>
+    <string name="button_logout">Sair</string>
 
     <string name="dialogNewTitle">Aulas de música</string>
     <string name="dialogEditTitle">Editar aula</string>

@@ -11,6 +11,7 @@ class HomeViewModel : ViewModel() {
 
     private val db = FirebaseFirestore.getInstance()
     val userNameState = MutableLiveData<RequestState<String>>()
+    val logoutState = MutableLiveData<RequestState<String>>()
 
     private fun saveToken() {
         val user = FirebaseAuth.getInstance().uid
@@ -25,5 +26,11 @@ class HomeViewModel : ViewModel() {
     }
     private fun getUser() {
         saveToken()
+    }
+
+    fun signOut() {
+        logoutState.value = RequestState.Loading
+        FirebaseAuth.getInstance().signOut()
+        logoutState.value = RequestState.Success("")
     }
 }

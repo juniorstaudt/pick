@@ -28,17 +28,6 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <TextView
-            android:id="@+id/tvHomeSubTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/helvetica_neue"
-            tools:text="Versão 2.0"
-            android:textColor="#FFF"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/tvHomeTitle"
-            app:layout_constraintStart_toStartOf="@+id/tvHomeTitle" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -46,7 +35,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/nvHome"
@@ -85,7 +74,7 @@
             style="@style/button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="64dp"
             android:text="@string/button_create_class"
             app:layout_constraintEnd_toEndOf="@+id/tvSubTitleSignUp"
             app:layout_constraintStart_toStartOf="@+id/tvSubTitleSignUp"
@@ -96,12 +85,23 @@
             style="@style/button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="64dp"
             android:text="@string/button_about"
             app:layout_constraintEnd_toEndOf="@+id/btCreateClass"
             app:layout_constraintStart_toStartOf="@+id/btCreateClass"
             app:layout_constraintTop_toBottomOf="@+id/btCreateClass" />
 
+
+        <Button
+            android:id="@+id/btLogOut"
+            style="@style/button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:text="@string/button_logout"
+            app:layout_constraintEnd_toEndOf="@+id/btAbout"
+            app:layout_constraintStart_toStartOf="@+id/btAbout"
+            app:layout_constraintTop_toBottomOf="@+id/btAbout" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -113,13 +113,8 @@
         android:layout_marginStart="0dp"
         android:layout_marginEnd="0dp"
         android:background="?android:attr/windowBackground"
-        android:backgroundTint="@color/home_navigation_background"
-        app:itemBackground="@color/home_navigation_background"
-        app:itemIconTint="@color/home_navigation_item"
-        app:itemTextColor="@color/home_navigation_item"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:menu="@menu/home_menu" />
+        app:layout_constraintRight_toRightOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

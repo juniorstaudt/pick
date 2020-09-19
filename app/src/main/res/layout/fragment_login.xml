@@ -20,17 +20,19 @@
 
 
     <TextView
-        android:transitionName="textApp"
         android:id="@+id/tvAppName"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="112dp"
         android:layout_marginTop="56dp"
+        android:layout_marginEnd="16dp"
         android:fontFamily="@font/helvetica_neue"
         android:text="@string/app_name"
         android:textColor="@color/primaryTextColor"
-        android:textSize="32sp"
+        android:textSize="28sp"
         android:textStyle="bold"
+        android:transitionName="textApp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/ivLogoApp"
         app:layout_constraintTop_toTopOf="@+id/ivLogoApp" />
 
@@ -39,7 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="@string/login_subtitle"
         android:textColor="#9EB0BC"
         android:textSize="16sp"
